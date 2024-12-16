@@ -1,0 +1,33 @@
+
+    longueur  0           
+    mots  0               
+    voyelles  0            
+    précédent  " "         
+
+    Afficher("Entrez une phrase terminée par un point : ")
+    Répéter
+        Lire(caractère) 
+
+    
+        longueur ← longueur +1
+
+        SI caractère = "a" OU caractère = "e" OU caractère = "i" OU 
+           caractère = "o" OU caractère = "u" OU caractère = "A" OU 
+           caractère = "E" OU caractère = "I" OU caractère = "O" OU 
+           caractère = "U" ALORS
+            voyelles ← voyelles + 1
+        FINSI
+
+        SI précédent = " " ET caractère ≠ " " ET caractère ≠ "." ALORS
+            mots ← mots + 1
+        FINSI
+
+        précédent ← caractère
+
+    JUSQU'À caractère = "." // Terminer lorsque le point est atteint
+
+    // Afficher les résultats
+    Afficher("Longueur de la phrase : ", longueur)
+    Afficher("Nombre de mots : ", mots)
+    Afficher("Nombre de voyelles : ", voyelles)
+
